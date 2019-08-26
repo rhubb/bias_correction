@@ -23,7 +23,7 @@ library(gee)
 
 
 ## Function for bias correction with unknown values for mu0 and mu1
-## link can take values "ident", "log", or "logistic"
+## link can take values "ident", "log", or "logit"
 bias.adjust.unk <- function(p,X,W,S,C,pstar, link = "ident"){
   
   # dichotomized phenotype
@@ -63,7 +63,7 @@ bias.adjust.unk <- function(p,X,W,S,C,pstar, link = "ident"){
 }
 
 ## Function for bias correction with known values for mu0 and mu1
-## link can take values "ident", "log", or "logistic"
+## link can take values "ident", "log", or "logit"
 bias.adjust.known <- function(p,X,W,mu0,mu1, link = "ident"){
   
   # sample size
