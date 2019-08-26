@@ -67,7 +67,7 @@ bias.adjust.unk <- function(p,X,W,S,C,pstar, link = "ident"){
 bias.adjust.known <- function(p,X,W,mu0,mu1, link = "ident"){
   
   # sample size
-  N <- length(hatY)
+  N <- length(p)
 
   # regress probabilistic phenotype on predictors
   fitp = gee(p~X + W,id = seq(1,N), fam = "gaussian")
